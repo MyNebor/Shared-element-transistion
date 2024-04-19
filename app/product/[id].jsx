@@ -38,12 +38,11 @@ const products = [
 
 const Product = () => {
 	const router = useRouter();
-	const { query } = useLocalSearchParams();
+	const { id } = useLocalSearchParams();
 	const [product, setProduct] = useState(products[0]);
 	useEffect(() => {
-		setProduct(query ? products[Number(query)] : products[0]);
+		setProduct(id ? products[Number(id) - 1] : products[0]);
 	}, []);
-	console.log(query);
 	return (
 		<BlurView
 			intensity={40}
