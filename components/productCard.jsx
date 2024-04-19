@@ -10,15 +10,7 @@ const VideoCard = ({ id, title, creator, thumbnail }) => {
 				className="w-full h-60 rounded-xl mt-3 relative flex justify-center
 				items-center"
 				asChild>
-				<Pressable
-					onPress={() =>
-						router.push({
-							pathname: "/product",
-							params: {
-								id: dynamicLabelId,
-							},
-						})
-					}>
+				<Pressable>
 					<Animated.Image
 						sharedTransitionTag="sharedTag"
 						source={{ uri: thumbnail }}
