@@ -3,8 +3,9 @@ import React, { useEffect, useState } from "react";
 import { BlurView } from "expo-blur";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import Animated, { FadeInLeft } from "react-native-reanimated";
+import { type IProductCard } from "../../type";
 
-const products = [
+const products: IProductCard[] = [
 	{
 		$id: "1",
 		title: "Sports car driving on asphalt road at night generative AI",

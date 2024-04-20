@@ -1,9 +1,10 @@
 import { SafeAreaView } from "react-native-safe-area-context";
 import { FlatList, Text, View } from "react-native";
 import { ProductCard } from "../components";
+import { IProductCard } from "../type";
 
 const Home = () => {
-	const products = [
+	const products: IProductCard[] = [
 		{
 			$id: "1",
 			title: "Sports car driving on asphalt road at night generative AI",
@@ -42,7 +43,7 @@ const Home = () => {
 				keyExtractor={(item) => item.$id}
 				renderItem={({ item }) => (
 					<ProductCard
-						id={item.$id}
+						$id={item.$id}
 						title={item.title}
 						thumbnail={item.thumbnail}
 						creator={item.creator}

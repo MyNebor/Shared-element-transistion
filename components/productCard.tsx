@@ -1,14 +1,15 @@
 import Animated from "react-native-reanimated";
 import { View, Text, Pressable } from "react-native";
 import { Link, router } from "expo-router";
+import { type IProductCard } from "../type";
 
-const VideoCard = ({ id, title, creator, thumbnail }) => {
+const VideoCard = ({ $id, title, creator, thumbnail }: IProductCard) => {
 	return (
 		<View className="flex flex-col items-center px-4 mb-14 pswp-gallery">
 			<Link
 				href={{
 					pathname: "/product/[id]",
-					params: { id: id },
+					params: { id: $id },
 				}}
 				className="w-full h-60 rounded-xl mt-3 relative flex justify-center
 				items-center"
