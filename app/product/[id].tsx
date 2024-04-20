@@ -51,7 +51,7 @@ const Product = () => {
 			className="bg-gray-500 px-2 flex-1 justify-center">
 			<Pressable onPress={() => router.back()}>
 				<Animated.Image
-					entering={FadeInLeft.duration(400).delay(900)}
+					entering={FadeInLeft.duration(400).delay(600)}
 					sharedTransitionTag="sharedTag"
 					source={{
 						uri: product.thumbnail,
